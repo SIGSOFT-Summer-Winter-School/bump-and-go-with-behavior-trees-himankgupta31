@@ -1,1 +1,27 @@
-Create the tree with groot
+<?xml version="1.0"?>
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <ReactiveSequence>
+            <Fallback>
+                <Inverter>
+                    <Condition ID="IsObstacle" distance="1"/>
+                </Inverter>
+                <Sequence>
+                    <Action ID="Back"/>
+                    <Action ID="Turn"/>
+                </Sequence>
+            </Fallback>
+            <Action ID="Forward"/>
+        </ReactiveSequence>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="Back"/>
+        <Action ID="Forward"/>
+        <Action ID="Froward"/>
+        <Action ID="Turn"/>
+        <Condition ID="isObstacle"/>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>
